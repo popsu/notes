@@ -1,4 +1,4 @@
-# Discrete fourier transform
+# Discrete Fourier Transform
 
 Let's consider polynomial:
 $A(x) = a_0 \cdot x^0 + a_1 \cdot x^1 + a_2 \cdot x^2 + ... + a_{n-1} \cdot x^{n-1}$
@@ -25,7 +25,7 @@ Multiply | O(n^2) | O(n) | O(n)
 
 Discrete fourier transform is the transform between coefficient and sample representations. Using FFT (fast fourier transform) algorithm we can perform this operation in O(n log n) time. The inverse operation also has same time complexity.
 
-The idea is that instead of performing O(n^2) operation, we will use FFT to transform the representation, then do the operation in O(n) time, then transform back with IFFT. This way we can perform all 3 operations in O(n lg n) time or less.
+The idea is that instead of performing O(n^2) operation, we will use FFT to transform the representation, then do the operation in O(n) time, then transform back with IFFT. This way we can perform all 3 operations in O(n log n) time or less.
 
 We can calculate the DFT with [DFT Matrix](./dft_matrix.md) or more efficiently with using [FFT](./discrete_fft.md)
 
