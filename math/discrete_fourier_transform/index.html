@@ -445,7 +445,7 @@
                   </a>
                 
                 
-                <h1 id="discrete-fourier-transform">Discrete fourier transform</h1>
+                <h1 id="discrete-fourier-transform">Discrete Fourier Transform</h1>
 <p>Let's consider polynomial:
 <span class="arithmatex">\(A(x) = a_0 \cdot x^0 + a_1 \cdot x^1 + a_2 \cdot x^2 + ... + a_{n-1} \cdot x^{n-1}\)</span></p>
 <p>There are 3 different representations for this polynomial:</p>
@@ -492,7 +492,7 @@
 </tbody>
 </table>
 <p>Discrete fourier transform is the transform between coefficient and sample representations. Using FFT (fast fourier transform) algorithm we can perform this operation in O(n log n) time. The inverse operation also has same time complexity.</p>
-<p>The idea is that instead of performing O(n^2) operation, we will use FFT to transform the representation, then do the operation in O(n) time, then transform back with IFFT. This way we can perform all 3 operations in O(n lg n) time or less.</p>
+<p>The idea is that instead of performing O(n^2) operation, we will use FFT to transform the representation, then do the operation in O(n) time, then transform back with IFFT. This way we can perform all 3 operations in O(n log n) time or less.</p>
 <p>We can calculate the DFT with <a href="../dft_matrix/">DFT Matrix</a> or more efficiently with using <a href="../discrete_fft/">FFT</a></p>
 <h2 id="links">Links</h2>
 <ul>
