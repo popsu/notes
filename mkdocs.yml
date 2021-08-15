@@ -1,0 +1,77 @@
+# Original yaml from
+# https://github.com/UnlockedEdu/documentation-pipeline-generator/blob/c4dd24224c5b6c859bcd8cd8d33c833a0c519d7e/docs/mkdocs.yml
+# https://www.mkdocs.org/user-guide/configuration/
+site_name: Notes
+site_description: Miscellanous notes
+site_author: Tommi Hovi
+site_url: https://popsu.github.io/notes
+repo_name: popsu/notes
+repo_url: https://github.com/popsu/notes
+edit_uri: edit/main/docs/docs
+
+theme:
+    name: material
+    palette:
+      - scheme: slate
+        toggle:
+          icon: material/theme-light-dark
+          name: Switch to light mode
+        primary: blue
+      - scheme: default
+        toggle:
+          icon: material/theme-light-dark
+          name: Switch to dark mode
+    features:
+      # - navigation.tabs
+
+nav:
+    # - Home: index.md
+    - Math:
+      - Fourier Transform:
+        - Discrete FT:  math/discrete_fourier_transform.md
+        - Discrete FFT: math/discrete_fft.md
+        - DFT Matrix: math/dft_matrix.md
+        - Vandermonde Matrix: math/vandermonde_matrix.md
+      - Monoid: math/monoid.md
+
+markdown_extensions:
+    # MathJax
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.superfences
+    - pymdownx.progressbar
+    - pymdownx.details
+    - pymdownx.emoji
+    - pymdownx.keys
+    - pymdownx.smartsymbols
+    - pymdownx.magiclink:
+        repo_url_shortener: True
+        repo_url_shorthand: True
+        social_url_shorthand: True
+        # more options on magiclink https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/#options
+        provider: 'github'
+    - codehilite:
+        # https://help.farbox.com/pygments.html
+        pygments_style: 'pastie'
+        linenums: False
+        # set to false to turn off pygments_style
+        noclasses: True
+    - pymdownx.tasklist
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.8.0/flowchart.min.js
+    # For MathJax
+    # https://squidfunk.github.io/mkdocs-material/reference/mathjax/#configuration
+    - javascripts/config.js
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+    - css/progress_bar.css
+    - css/details.css
+    - css/tasklist.css
+    - css/custom_tasklist.css
+    - css/pagewidth.css

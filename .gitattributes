@@ -1,0 +1,4 @@
+# http://timstaley.co.uk/posts/making-git-and-jupyter-notebooks-play-nice/
+# Requirement: add the filter "nbstrip_full" from above link to your gitconfig
+# Clean up notebook outputs using jq
+*.ipynb filter=nbstrip_full
