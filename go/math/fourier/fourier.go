@@ -34,6 +34,23 @@ func FFT(in []complex128) []complex128 {
 	return y
 }
 
+func IFFT(in []complex128) []complex128 {
+	// take complex conjugates
+	for i, val := range in {
+		in[i] = cmplx.Conj(val)
+	}
+	// calculate normal FFT
+	out := FFT(in)
+
+	n := float64(len(in))
+	// take complex conjugates and scale by 1/n
+	for i, val := range out {
+		out[i] = cmplx.Conj(val) * complex(1.0/n, 0)
+	}
+
+	return out
+}
+
 // splitToEvenAndOdds splits the slice into even and odd index parts.
 // in: [0, 1, 2, 3, 4, 5, 6] -> even: [0, 2, 4, 6], odd: [1, 3, 5]
 func splitToEvenAndOdds(in []complex128) (even, odd []complex128) {

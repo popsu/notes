@@ -18,10 +18,7 @@ func TestFFT(t *testing.T) {
 		{
 			desc: "2 length",
 			in:   []complex128{1, 2},
-			want: []complex128{
-				3,
-				-1,
-			},
+			want: []complex128{3, -1},
 		},
 		{
 			desc: "4 length",
@@ -51,6 +48,52 @@ func TestFFT(t *testing.T) {
 	for _, tt := range testCases {
 		t.Run(tt.desc, func(t *testing.T) {
 			got := FFT(tt.in)
+			assert.True(t, equalApprox(tt.want, got, epsilon))
+		})
+	}
+}
+
+func TestIFFT(t *testing.T) {
+	const epsilon = 1e-8
+
+	testCases := []struct {
+		desc string
+		in   []complex128
+		want []complex128
+	}{
+		{
+			desc: "2 length",
+			in:   []complex128{3, -1},
+			want: []complex128{1, 2},
+		},
+		{
+			desc: "4 length",
+			in: []complex128{
+				10,
+				-2 + 2i,
+				-2,
+				-2 - 2i,
+			},
+			want: []complex128{1, 2, 3, 4},
+		},
+		{
+			desc: "8 length",
+			in: []complex128{
+				20,
+				8.70710678 - 3.46446609e+00i,
+				1 + 1i,
+				7.29289322 + 1.05355339e+01i,
+				10 - 2.08189956e-15i,
+				7.29289322 - 1.05355339e+01i,
+				1 - 1i,
+				8.70710678 + 3.46446609e+00i,
+			},
+			want: []complex128{8, 0, 7, 0, 0, 2, 0, 3},
+		},
+	}
+	for _, tt := range testCases {
+		t.Run(tt.desc, func(t *testing.T) {
+			got := IFFT(tt.in)
 			assert.True(t, equalApprox(tt.want, got, epsilon))
 		})
 	}
