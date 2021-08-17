@@ -460,7 +460,7 @@
                 
                 
                 <h1 id="discrete-fast-fourier-transform">Discrete Fast Fourier Transform</h1>
-<p>FFT is fast way to calculate the DFT matrix multiplication. It exploits symmetries of roots of unity and thus we get the time complexity from O(n^2) down to O(n log n).</p>
+<p>FFT is fast way to calculate the DFT matrix multiplication. This is basicallyevaluating n points of (n-1)-degree polynomials, so time complexity is O(n^2). FFT gets this down to O(n log n) by exploiting symmetries of roots of unity.</p>
 <p>Key Idea:</p>
 <ol>
 <li>Split polynomial into even and odd terms <span class="arithmatex">\(A(x) = A_e(x) + A_o(x)\)</span><ul>
@@ -512,6 +512,8 @@
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Even_and_odd_functions">Even and odd functions - wikipedia</a></li>
 <li><a href="https://www.youtube.com/watch?v=h7apO7q16V0">The Fast Fourier Transform (FFT): Most Ingenious Algorithm Ever? - youtube</a></li>
+<li><a href="https://www.youtube.com/watch?v=2V7XT_iiRRw">Lecture 8 - Algorithms: The Fast Fourier Transform (FFT) - youtube</a></li>
+<li><a href="https://www.youtube.com/watch?v=M0Sa8fLOajA">26. Complex Matrices; Fast Fourier Transform</a></li>
 </ul>
                 
               

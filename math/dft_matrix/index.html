@@ -352,6 +352,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#inverse-of-dft" class="md-nav__link">
+    Inverse of DFT
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -428,6 +435,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#inverse-of-dft" class="md-nav__link">
+    Inverse of DFT
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -478,17 +492,6 @@ x_7 &amp;= \omega ^7 = &amp;i \omega
 1&amp;i&amp;-1&amp;-i&amp;1&amp;i&amp;-1&amp;-i\\
 1&amp;i\omega &amp;i&amp;-\omega &amp;-1&amp;-i\omega &amp;-i&amp;\omega \\
 \end{bmatrix}}}\]</div>
-<p>To convert back use the inverse:</p>
-<div class="arithmatex">\[{\displaystyle V^{-1} = \frac{\overline V}{n}={ \frac{1}{n} \cdot \begin{bmatrix}
-1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\\
-1&amp;i\omega &amp;i&amp;-\omega &amp;-1&amp;-i\omega &amp;-i&amp;\omega \\
-1&amp;i&amp;-1&amp;-i&amp;1&amp;i&amp;-1&amp;-i\\
-1&amp;-\omega &amp;-i&amp;i\omega &amp;-1&amp;\omega &amp;i&amp;-i\omega \\
-1&amp;-1&amp;1&amp;-1&amp;1&amp;-1&amp;1&amp;-1\\
-1&amp;-i\omega &amp;i&amp;\omega &amp;-1&amp;i\omega &amp;-i&amp;-\omega \\
-1&amp;-i&amp;-1&amp;i&amp;1&amp;-i&amp;-1&amp;i\\
-1&amp;\omega &amp;-i&amp;-i\omega &amp;-1&amp;-\omega &amp;i&amp;i\omega \\
-\end{bmatrix}}}\]</div>
 <h2 id="orthogonality-of-dft-matrix">Orthogonality of DFT matrix</h2>
 <p>All the columns in <span class="arithmatex">\(V\)</span> are orthogonal and since it's a change-of-base matrix it means the basis is orthogonal. The dot product of two complex vectors is defined as <span class="arithmatex">\(\textbf{a} \cdot \textbf{b} = \sum a_j \overline b_j\)</span>, where <span class="arithmatex">\(\overline b_j\)</span> is the complex conjugate of <span class="arithmatex">\(b_j\)</span>.</p>
 <p>Proof:</p>
@@ -501,7 +504,30 @@ x_7 &amp;= \omega ^7 = &amp;i \omega
 &amp;= \frac{1 - \omega_{k}^{n}}{1 - \omega_{k}} &amp;\text{geometric series formula, note } \omega_k \neq 1\\
 &amp;= \frac{1 - 1}{1 - \omega_k} &amp;{\omega^n = \omega^0 = 1}\\
 &amp;= 0\end{aligned}\]</div>
-<p>QED</p>
+<p>QED.</p>
+<h2 id="inverse-of-dft">Inverse of DFT</h2>
+<p>Complex matrix with orthonormal columns is called Unitary matrix. Since the DFT columns are orthogonal, we can make the DFT matrix Unitary by scaling the columns to be unit-length:</p>
+<div class="arithmatex">\[U = \frac{1}{\sqrt{n}} \cdot V \iff \sqrt{n} \cdot U = V\]</div>
+<p>For unitary matrixes the inverse is just the conjugate transpose:</p>
+<div class="arithmatex">\[U^{-1} = \overline U \iff U\overline U = I\]</div>
+<p>For invertible matrix <span class="arithmatex">\(A\)</span> we have: <span class="arithmatex">\((kA)^{-1} = k^{-1}A^{-1}\)</span>. Using this and the previous statements we can get the inverse of <span class="arithmatex">\(V\)</span>:</p>
+<div class="arithmatex">\[\begin{aligned}
+U^{-1} &amp;= \overline{U} &amp;\iff \\
+(\frac{1}{\sqrt{n}} \cdot V)^{-1} &amp;= \overline{(\frac{1}{\sqrt{n}} \cdot V)} &amp;\iff \\
+\sqrt{n}V^{-1} &amp;= \frac{1}{\sqrt{n}} \overline{V} &amp;\iff \\
+V^{-1} &amp;= \frac{1}{n} \cdot \overline{V}
+\end{aligned}\]</div>
+<p>So for example the inverse for the DFT with  n = 8, we get:</p>
+<div class="arithmatex">\[{\displaystyle V^{-1} = \frac{1}{n} \cdot \overline V={ \frac{1}{n} \cdot \begin{bmatrix}
+1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1&amp;1\\
+1&amp;i\omega &amp;i&amp;-\omega &amp;-1&amp;-i\omega &amp;-i&amp;\omega \\
+1&amp;i&amp;-1&amp;-i&amp;1&amp;i&amp;-1&amp;-i\\
+1&amp;-\omega &amp;-i&amp;i\omega &amp;-1&amp;\omega &amp;i&amp;-i\omega \\
+1&amp;-1&amp;1&amp;-1&amp;1&amp;-1&amp;1&amp;-1\\
+1&amp;-i\omega &amp;i&amp;\omega &amp;-1&amp;i\omega &amp;-i&amp;-\omega \\
+1&amp;-i&amp;-1&amp;i&amp;1&amp;-i&amp;-1&amp;i\\
+1&amp;\omega &amp;-i&amp;-i\omega &amp;-1&amp;-\omega &amp;i&amp;i\omega \\
+\end{bmatrix}}}\]</div>
 <p>Links: <a href="https://en.wikipedia.org/wiki/DFT_matrix">wikipedia</a></p>
                 
               
