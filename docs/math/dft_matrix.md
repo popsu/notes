@@ -37,19 +37,6 @@ $${\displaystyle V={\begin{bmatrix}
 1&i\omega &i&-\omega &-1&-i\omega &-i&\omega \\
 \end{bmatrix}}}$$
 
-To convert back use the inverse:
-
-$${\displaystyle V^{-1} = \frac{\overline V}{n}={ \frac{1}{n} \cdot \begin{bmatrix}
-1&1&1&1&1&1&1&1\\
-1&i\omega &i&-\omega &-1&-i\omega &-i&\omega \\
-1&i&-1&-i&1&i&-1&-i\\
-1&-\omega &-i&i\omega &-1&\omega &i&-i\omega \\
-1&-1&1&-1&1&-1&1&-1\\
-1&-i\omega &i&\omega &-1&i\omega &-i&-\omega \\
-1&-i&-1&i&1&-i&-1&i\\
-1&\omega &-i&-i\omega &-1&-\omega &i&i\omega \\
-\end{bmatrix}}}$$
-
 ## Orthogonality of DFT matrix
 
 All the columns in $V$ are orthogonal and since it's a change-of-base matrix it means the basis is orthogonal. The dot product of two complex vectors is defined as $\textbf{a} \cdot \textbf{b} = \sum a_j \overline b_j$, where $\overline b_j$ is the complex conjugate of $b_j$.
@@ -67,6 +54,38 @@ $$\begin{aligned}
 &= \frac{1 - 1}{1 - \omega_k} &{\omega^n = \omega^0 = 1}\\
 &= 0\end{aligned}$$
 
-QED
+QED.
+
+## Inverse of DFT
+
+Complex matrix with orthonormal columns is called Unitary matrix. Since the DFT columns are orthogonal, we can make the DFT matrix Unitary by scaling the columns to be unit-length:
+
+$$U = \frac{1}{\sqrt{n}} \cdot V \iff \sqrt{n} \cdot U = V$$
+
+For unitary matrixes the inverse is just the conjugate transpose:
+
+$$U^{-1} = \overline U \iff U\overline U = I$$
+
+For invertible matrix $A$ we have: $(kA)^{-1} = k^{-1}A^{-1}$. Using this and the previous statements we can get the inverse of $V$:
+
+$$\begin{aligned}
+U^{-1} &= \overline{U} &\iff \\
+(\frac{1}{\sqrt{n}} \cdot V)^{-1} &= \overline{(\frac{1}{\sqrt{n}} \cdot V)} &\iff \\
+\sqrt{n}V^{-1} &= \frac{1}{\sqrt{n}} \overline{V} &\iff \\
+V^{-1} &= \frac{1}{n} \cdot \overline{V}
+\end{aligned}$$
+
+So for example the inverse for the DFT with  n = 8, we get:
+
+$${\displaystyle V^{-1} = \frac{1}{n} \cdot \overline V={ \frac{1}{n} \cdot \begin{bmatrix}
+1&1&1&1&1&1&1&1\\
+1&i\omega &i&-\omega &-1&-i\omega &-i&\omega \\
+1&i&-1&-i&1&i&-1&-i\\
+1&-\omega &-i&i\omega &-1&\omega &i&-i\omega \\
+1&-1&1&-1&1&-1&1&-1\\
+1&-i\omega &i&\omega &-1&i\omega &-i&-\omega \\
+1&-i&-1&i&1&-i&-1&i\\
+1&\omega &-i&-i\omega &-1&-\omega &i&i\omega \\
+\end{bmatrix}}}$$
 
 Links: [wikipedia](https://en.wikipedia.org/wiki/DFT_matrix)
