@@ -35,6 +35,8 @@ nav:
       - Monoid: math/monoid.md
 
 markdown_extensions:
+    # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+    - admonition
     # MathJax
     - pymdownx.arithmatex:
         generic: true

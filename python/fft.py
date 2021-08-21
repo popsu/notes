@@ -4,7 +4,7 @@ from typing import List
 import numpy as np
 
 
-def fft(p: List[complex]):
+def fft(p: List[complex]) -> List[complex]:
     # radix 2 Cooley-Tukey algorithm
     n = len(p)
 
@@ -24,7 +24,7 @@ def fft(p: List[complex]):
     return y
 
 
-def ifft(p: List[complex]):
+def ifft(p: List[complex]) -> List[complex]:
     # Take complex conjugates
     p = [np.conj(x) for x in p]
     # Calculate normal fft
