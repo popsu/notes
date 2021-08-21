@@ -13,3 +13,8 @@
     transform: none;
   }
 }
+
+/* Override admonition default font size to make it as big as default */
+.admonition, .example, .note {
+  font-size: 0.8rem !important;
+}

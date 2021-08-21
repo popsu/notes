@@ -334,13 +334,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-implementation" class="md-nav__link">
-    Python implementation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -429,13 +422,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-implementation" class="md-nav__link">
-    Python implementation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links
   </a>
@@ -460,26 +446,39 @@
                 
                 
                 <h1 id="discrete-fast-fourier-transform">Discrete Fast Fourier Transform</h1>
-<p>FFT is fast way to calculate the DFT matrix multiplication. This is basicallyevaluating n points of (n-1)-degree polynomials, so time complexity is O(n^2). FFT gets this down to O(n log n) by exploiting symmetries of roots of unity.</p>
+<p>FFT is fast way to calculate the DFT matrix multiplication.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>DFT is basically evaluating n points of (n-1)-degree polynomials, thus naive time complexity is n * O(n) = O(n^2). FFT gets this down to O(n log n) by exploiting symmetries of roots of unity and even functions.</p>
+</div>
 <p>Key Idea:</p>
 <ol>
 <li>Split polynomial into even and odd terms <span class="arithmatex">\(A(x) = A_e(x) + A_o(x)\)</span><ul>
 <li>Even terms form an even function: <span class="arithmatex">\(A_e(x) = A_e(-x)\)</span></li>
-<li>Odd terms form an odd function: <span class="arithmatex">\(A_o(x) = -A_o(-x)\)</span></li>
+<li>Odd terms we can factor x out and get even function</li>
 </ul>
 </li>
-<li>Recursively compute <span class="arithmatex">\(A_e(y) \text{ and } A_o(y) \text{ for } y \in X^2 = \{x^2 | x \in X\}\)</span></li>
+<li>Recursively compute <span class="arithmatex">\(A_e(y) \text{ and } A_o(y) \text{ for } y \in X^2 = \{x^2 | x \in X\}\)</span><ul>
+<li>Because we are using roots of unity and  we have even functions the number of items in this set stays small enough</li>
+<li>Base case is when the degree is 0, so <span class="arithmatex">\(A\)</span> is a constant</li>
+</ul>
+</li>
 <li>Combine <span class="arithmatex">\(A(x) = A_e(x^2) + x \cdot A_o(x^2)\)</span></li>
 </ol>
-<p>I like to think about the DFT as a set of dot products between the signal and each base function (so conceptually it is in no way different than any other linear coordinate transform). And the FFT is a way to avoid explicitly computing every single dot product.</p>
-<h2 id="python-implementation">Python implementation</h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">e</span><span class="p">,</span> <span class="n">pi</span>
+<details class="example" open="open"><summary>Example</summary><p>Let <span class="arithmatex">\(A(x) = 2x^7 + 3x^6 + 4x^5 + 5x^4 + 6x^3 + 7x^2 + 8x + 9\)</span></p>
+<p>Split A into even and odd terms and substitute <span class="arithmatex">\(x^2 = y\)</span> and we get two degree 3 polynomials (instead of one degree 7):</p>
+<p>-&gt; even terms <span class="arithmatex">\(A_e(x) =  3x^6 + 5x^4 + 7x^2  + 9 \implies A_e(y) = 3y^3 + 5y^2 + 7y + 9\)</span></p>
+<p>-&gt; odd terms <span class="arithmatex">\(A_o(x) = 2x^7 + 4x^5 + 6x^3 + 8x = x (2x^6 + 4x^4 + 6x^2 + 8) \implies A_o(y) = 2y^3 + 4y^2 + 6y + 8\)</span></p>
+<p>Overall this is just <span class="arithmatex">\(A(x) = 3(x^2)^3 + 5(x^2)^2 + 7(x^2) + 9 + x \cdot (2(x^2)^3 + 4(x^2)^2 + 6(x^2) + 8)\)</span></p>
+<p>Another way to think about the DFT as a set of dot products between the signal and each base function (so conceptually it is in no way different than any other linear coordinate transform). And the FFT is a way to avoid explicitly computing every single dot product.</p>
+</details>
+<details class="note"><summary>Python implementation</summary><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">e</span><span class="p">,</span> <span class="n">pi</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
-<span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">]):</span>
+<span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">]:</span>
     <span class="c1"># radix 2 Cooley-Tukey algorithm</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 
@@ -499,7 +498,7 @@
     <span class="k">return</span> <span class="n">y</span>
 
 
-<span class="k">def</span> <span class="nf">ifft</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">]):</span>
+<span class="k">def</span> <span class="nf">ifft</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">]:</span>
     <span class="c1"># Take complex conjugates</span>
     <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="p">]</span>
     <span class="c1"># Calculate normal fft</span>
@@ -508,6 +507,7 @@
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="p">]</span>
 </code></pre></div>
+</details>
 <h2 id="links">Links</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Even_and_odd_functions">Even and odd functions - wikipedia</a></li>
