@@ -32,7 +32,9 @@ nav:
         - Discrete FFT: math/discrete_fft.md
         - DFT Matrix: math/dft_matrix.md
         - Vandermonde Matrix: math/vandermonde_matrix.md
-      - Monoid: math/monoid.md
+      - Abstract Algebra:
+        - General: math/abstract_algebra.md
+        - Monoid: math/monoid.md
     - Go:
       - io.Reader: go/io_reader.md
 
