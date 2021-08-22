@@ -13,14 +13,14 @@
         <meta name="author" content="Tommi Hovi">
       
       
-        <link rel="canonical" href="https://popsu.github.io/notes/math/discrete_fft/">
+        <link rel="canonical" href="https://popsu.github.io/notes/go/io_reader/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Discrete FFT - Notes</title>
+        <title>io.Reader - Notes</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#discrete-fast-fourier-transform" class="md-skip">
+        <a href="#ioreader" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Discrete FFT
+              io.Reader
             
           </span>
         </div>
@@ -241,14 +241,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       <label class="md-nav__link" for="__nav_1">
         Math
@@ -264,14 +262,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
       
       <label class="md-nav__link" for="__nav_1_1">
         Fourier Transform
@@ -289,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discrete_fourier_transform/" class="md-nav__link">
+      <a href="../../math/discrete_fourier_transform/" class="md-nav__link">
         Discrete FT
       </a>
     </li>
@@ -299,51 +295,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Discrete FFT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../math/discrete_fft/" class="md-nav__link">
         Discrete FFT
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -353,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dft_matrix/" class="md-nav__link">
+      <a href="../../math/dft_matrix/" class="md-nav__link">
         DFT Matrix
       </a>
     </li>
@@ -365,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vandermonde_matrix/" class="md-nav__link">
+      <a href="../../math/vandermonde_matrix/" class="md-nav__link">
         Vandermonde Matrix
       </a>
     </li>
@@ -383,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monoid/" class="md-nav__link">
+      <a href="../../math/monoid/" class="md-nav__link">
         Monoid
       </a>
     </li>
@@ -402,12 +358,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Go
@@ -423,11 +381,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../go/io_reader/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         io.Reader
       </a>
+      
     </li>
   
 
@@ -457,21 +425,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -482,81 +435,41 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/popsu/notes/edit/main/docs/docs/math/discrete_fft.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/popsu/notes/edit/main/docs/docs/go/io_reader.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="discrete-fast-fourier-transform">Discrete Fast Fourier Transform</h1>
-<p>FFT is fast way to calculate the DFT matrix multiplication.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>DFT is basically evaluating n points of a (n-1)-degree polynomial, thus naive time complexity is O(n^2). FFT gets this down to O(n log n) by exploiting symmetries of roots of unity and even functions.</p>
-</div>
-<p>Key Idea:</p>
-<ol>
-<li>Split polynomial into even and odd terms <span class="arithmatex">\(A(x) = A_e(x) + A_o(x)\)</span><ul>
-<li>Even terms form an even function: <span class="arithmatex">\(A_e(x) = A_e(-x)\)</span></li>
-<li>Odd terms we can factor x out and get even function</li>
-</ul>
-</li>
-<li>Recursively compute <span class="arithmatex">\(A_e(y) \text{ and } A_o(y) \text{ for } y \in X^2 = \{x^2 | x \in X\}\)</span><ul>
-<li>Because we are using roots of unity and  we have even functions the number of items in this set stays small enough</li>
-<li>Base case is when the degree is 0, so <span class="arithmatex">\(A\)</span> is a constant</li>
-</ul>
-</li>
-<li>Combine <span class="arithmatex">\(A(x) = A_e(x^2) + x \cdot A_o(x^2)\)</span></li>
-</ol>
-<details class="example" open="open"><summary>Example</summary><p>Let <span class="arithmatex">\(A(x) = 2x^7 + 3x^6 + 4x^5 + 5x^4 + 6x^3 + 7x^2 + 8x + 9\)</span></p>
-<p>Split A into even and odd terms and substitute <span class="arithmatex">\(x^2 = y\)</span> and we get two degree 3 polynomials (instead of one degree 7):</p>
-<p>-&gt; even terms <span class="arithmatex">\(A_e(x) =  3x^6 + 5x^4 + 7x^2  + 9 \implies A_e(y) = 3y^3 + 5y^2 + 7y + 9\)</span></p>
-<p>-&gt; odd terms <span class="arithmatex">\(A_o(x) = 2x^7 + 4x^5 + 6x^3 + 8x = x (2x^6 + 4x^4 + 6x^2 + 8) \implies A_o(y) = 2y^3 + 4y^2 + 6y + 8\)</span></p>
-<p>Overall this is just <span class="arithmatex">\(A(x) = 3(x^2)^3 + 5(x^2)^2 + 7(x^2) + 9 + x \cdot (2(x^2)^3 + 4(x^2)^2 + 6(x^2) + 8)\)</span></p>
-<p>Another way to think about the DFT as a set of dot products between the signal and each base function (so conceptually it is in no way different than any other linear coordinate transform). And the FFT is a way to avoid explicitly computing every single dot product.</p>
-</details>
-<details class="note"><summary>Python implementation</summary><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">e</span><span class="p">,</span> <span class="n">pi</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+                <h1 id="ioreader">io.Reader</h1>
+<div class="mermaid">%%{init: {'theme': 'base',  'themeVariables': { 'darkMode': true,
+'primaryColor': '#2c698f', 'lineColor': '#fcd303',
+'secondaryColor': '#00ff00', 'tertiaryColor': '#123456', 'primaryTextColor': '#e9ebd2'
+}}}%%
+graph LR
+    B["[]byte"]
+    R{io.Reader}
+    str("string (text)")
+    strFn("string (filename)")
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    subgraph ReaderWriter [io.Writer&lt;br&gt;io.Reader]
+        Fd[os.File]
+        buf[bytes.Buffer]
+    end
 
+    subgraph Reader [io.Reader]
+        br[bytes.Reader]
+        sr[strings.Reader]
+    end
 
-<span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">]:</span>
-    <span class="c1"># radix 2 Cooley-Tukey algorithm</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">n</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">n</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))):</span>  <span class="c1"># check if n is power of 2</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This implementation requires arrays with length power of two&quot;</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">p</span>
-
-    <span class="n">y_even</span><span class="p">,</span> <span class="n">y_odd</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">p</span><span class="p">[::</span><span class="mi">2</span><span class="p">]),</span> <span class="n">fft</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span>
-
-    <span class="n">omega</span> <span class="o">=</span> <span class="n">e</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="n">j</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>  <span class="c1"># primitive nth root of unity</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_even</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">omega</span> <span class="o">**</span> <span class="n">i</span> <span class="o">*</span> <span class="n">y_odd</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">y</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_even</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">omega</span> <span class="o">**</span> <span class="n">i</span> <span class="o">*</span> <span class="n">y_odd</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">y</span>
-
-
-<span class="k">def</span> <span class="nf">ifft</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">complex</span><span class="p">]:</span>
-    <span class="c1"># Take complex conjugates</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="p">]</span>
-    <span class="c1"># Calculate normal fft</span>
-    <span class="n">p</span> <span class="o">=</span> <span class="n">fft</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-    <span class="c1"># Take complex conjugates again and scale by 1/n</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p</span><span class="p">]</span>
-</code></pre></div>
-</details>
-<h2 id="links">Links</h2>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Even_and_odd_functions">Even and odd functions - wikipedia</a></li>
-<li><a href="https://www.youtube.com/watch?v=h7apO7q16V0">The Fast Fourier Transform (FFT): Most Ingenious Algorithm Ever? - youtube</a></li>
-<li><a href="https://www.youtube.com/watch?v=2V7XT_iiRRw">Lecture 8 - Algorithms: The Fast Fourier Transform (FFT) - youtube</a></li>
-<li><a href="https://www.youtube.com/watch?v=M0Sa8fLOajA">26. Complex Matrices; Fast Fourier Transform</a></li>
-</ul>
+    B --&gt;|bytes.NewBuffer| buf
+    B --&gt;|bytes.NewReader| br
+    B --&gt;|"string"| str
+    B --&gt;|os.WriteFile| strFn
+    str --&gt;|"[]bytes"| B
+    R --&gt;|io.ReadAll| B
+    strFn --&gt; |os.ReadFile| B
+    strFn --&gt; |os.Open| Fd
+    str --&gt; |strings.NewReader| sr</div>
                 
               
               
@@ -576,7 +489,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../discrete_fourier_transform/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Discrete FT" rel="prev">
+        <a href="../../math/monoid/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Monoid" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -585,26 +498,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Discrete FT
+              Monoid
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../dft_matrix/" class="md-footer__link md-footer__link--next" aria-label="Next: DFT Matrix" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              DFT Matrix
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
