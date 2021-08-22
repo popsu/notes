@@ -33,6 +33,8 @@ nav:
         - DFT Matrix: math/dft_matrix.md
         - Vandermonde Matrix: math/vandermonde_matrix.md
       - Monoid: math/monoid.md
+    - Go:
+      - io.Reader: go/io_reader.md
 
 markdown_extensions:
     # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
@@ -59,6 +61,15 @@ markdown_extensions:
         # set to false to turn off pygments_style
         noclasses: True
     - pymdownx.tasklist
+    - pymdownx.superfences:
+        # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences
+        custom_fences:
+          # https://github.com/squidfunk/mkdocs-material/issues/693#issuecomment-411885426
+          # https://github.com/mermaid-js/mermaid/blob/719de71de4eece268ff76cb1328cc1411d6ebdaf/docs/theming.md
+          # For theming help
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_div_format
 
 extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
@@ -70,6 +81,8 @@ extra_javascript:
     - javascripts/config.js
     - https://polyfill.io/v3/polyfill.min.js?features=es6
     - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    # mermaid
+    - https://unpkg.com/mermaid@8.11.5/dist/mermaid.min.js
 
 extra_css:
     - css/progress_bar.css
