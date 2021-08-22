@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://popsu.github.io/notes/math/abstract_algebra/</loc>
+         <lastmod>2021-08-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://popsu.github.io/notes/math/dft_matrix/</loc>
          <lastmod>2021-08-22</lastmod>
          <changefreq>daily</changefreq>
