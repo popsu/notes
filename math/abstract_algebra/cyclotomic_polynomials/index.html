@@ -13,21 +13,21 @@
         <meta name="author" content="Tommi Hovi">
       
       
-        <link rel="canonical" href="https://popsu.github.io/notes/">
+        <link rel="canonical" href="https://popsu.github.io/notes/math/abstract_algebra/cyclotomic_polynomials/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.5">
     
     
       
-        <title>Notes</title>
+        <title>Cyclotomic Polynomials - Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.be71726b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.be71726b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -42,15 +42,15 @@
     
     
     
-      <link rel="stylesheet" href="css/progress_bar.css">
+      <link rel="stylesheet" href="../../../css/progress_bar.css">
     
-      <link rel="stylesheet" href="css/details.css">
+      <link rel="stylesheet" href="../../../css/details.css">
     
-      <link rel="stylesheet" href="css/tasklist.css">
+      <link rel="stylesheet" href="../../../css/tasklist.css">
     
-      <link rel="stylesheet" href="css/custom_tasklist.css">
+      <link rel="stylesheet" href="../../../css/custom_tasklist.css">
     
-      <link rel="stylesheet" href="css/pagewidth.css">
+      <link rel="stylesheet" href="../../../css/pagewidth.css">
     
     
       
@@ -71,7 +71,7 @@
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notes" class="md-skip">
+        <a href="#cyclotomic-polynomials" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notes
+              Cyclotomic Polynomials
             
           </span>
         </div>
@@ -211,7 +211,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+    <a href="../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -241,12 +241,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       <label class="md-nav__link" for="__nav_1">
         Math
@@ -262,12 +264,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" checked>
       
       <label class="md-nav__link" for="__nav_1_1">
         Abstract Algebra
@@ -285,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/abstract_algebra/abstract_algebra/" class="md-nav__link">
+      <a href="../abstract_algebra/" class="md-nav__link">
         General
       </a>
     </li>
@@ -295,11 +299,51 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="math/abstract_algebra/cyclotomic_polynomials/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cyclotomic Polynomials
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Cyclotomic Polynomials
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -309,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/abstract_algebra/monoid/" class="md-nav__link">
+      <a href="../monoid/" class="md-nav__link">
         Monoid
       </a>
     </li>
@@ -348,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/discrete_fourier_transform/" class="md-nav__link">
+      <a href="../../discrete_fourier_transform/" class="md-nav__link">
         Discrete FT
       </a>
     </li>
@@ -360,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/discrete_fft/" class="md-nav__link">
+      <a href="../../discrete_fft/" class="md-nav__link">
         Discrete FFT
       </a>
     </li>
@@ -372,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/dft_matrix/" class="md-nav__link">
+      <a href="../../dft_matrix/" class="md-nav__link">
         DFT Matrix
       </a>
     </li>
@@ -384,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/vandermonde_matrix/" class="md-nav__link">
+      <a href="../../vandermonde_matrix/" class="md-nav__link">
         Vandermonde Matrix
       </a>
     </li>
@@ -432,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="go/io_reader/" class="md-nav__link">
+      <a href="../../../go/io_reader/" class="md-nav__link">
         io.Reader
       </a>
     </li>
@@ -464,6 +508,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -474,13 +533,42 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/popsu/notes/edit/main/docs/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/popsu/notes/edit/main/docs/docs/math/abstract_algebra/cyclotomic_polynomials.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="notes">Notes</h1>
-<p><a href="math/discrete_fourier_transform/">DFT</a></p>
+                <h1 id="cyclotomic-polynomials">Cyclotomic Polynomials</h1>
+<p>For <span class="arithmatex">\(n \in Z_+\)</span> the <span class="arithmatex">\(n\)</span>th cyclotomic polynomial is the unique irreducible polynomial whose roots are all <span class="arithmatex">\(n\)</span>th <strong>primitive</strong> roots of unity:</p>
+<p><span class="arithmatex">\(\displaystyle \Phi_{n}(x) = \prod_{\stackrel{1\leq k\leq n}{\gcd(k,n)=1}} \left(x-e^{2i\pi {\frac{k}{n}}}\right)\)</span>.</p>
+<p><span class="arithmatex">\(x\)</span> is a root of <span class="arithmatex">\(x^{n} -1\)</span> if and only if it is a <span class="arithmatex">\(d\)</span>th primitive root of unity for some <span class="arithmatex">\(d\)</span> that divides <span class="arithmatex">\(n\)</span>:</p>
+<p><span class="arithmatex">\(\displaystyle \prod_{d \mid n} \Phi_{d}(x) = x^{n} - 1\)</span></p>
+<p>The coefficients of cyclotomic polynomials are always integers. The smallest <span class="arithmatex">\(n\)</span> cyclotomic polynomial with integer other than <span class="arithmatex">\(1, -1\)</span> or <span class="arithmatex">\(0\)</span> is when <span class="arithmatex">\(n = 105\)</span>.</p>
+<details class="example"><summary>Example - <span class="arithmatex">\(\Phi_{1}(x)\)</span></summary><p>The only primitive 1<sup>st</sup> root of unity is 1. Thus <span class="arithmatex">\(\Phi_{1}(x) = x - 1\)</span></p>
+</details>
+<details class="example"><summary>Example - <span class="arithmatex">\(\Phi_{2}(x)\)</span></summary><p>The only primitive 2<sup>nd</sup> root of unity is -1. Thus <span class="arithmatex">\(\Phi_{2}(x) = x - (-1) = x + 1\)</span></p>
+</details>
+<details class="example"><summary>Example - <span class="arithmatex">\(\Phi_{3}(x)\)</span></summary><p>The 2 primitive 3<sup>rd</sup> roots of unity are <span class="arithmatex">\(e^{2i \pi \cdot \frac{1}{3}} = - \frac{1}{2} + i \frac{\sqrt{3}}{2}\)</span> and <span class="arithmatex">\(e^{2i \pi \cdot \frac{2}{3}} = - \frac{1}{2} - i \frac{\sqrt{3}}{2}\)</span></p>
+<p>Thus <span class="arithmatex">\(\Phi_{3}(x) = (x - (-\frac{1}{2} + i \frac{\sqrt{3}}{2})) \cdot (x - (-\frac{1}{2} - i \frac{\sqrt{3}}{2})) = (x + \frac{1}{2} - i \frac{\sqrt{3}}{2}) \cdot (x + \frac{1}{2} + i \frac{\sqrt{3}}{2})\)</span></p>
+<p><span class="arithmatex">\(= x^2 + \frac{1}{2}x + \cancel{i\frac{\sqrt{3}}{2}x} + \frac{1}{2}x + \frac{1}{4} + \cancel{i\frac{\sqrt{3}}{4}} - \cancel{i\frac{\sqrt{3}}{2}x} - \cancel{i\frac{\sqrt{3}}{4}} - (i\frac{\sqrt{3}}{2})^2\)</span></p>
+<p><span class="arithmatex">\(= x^2 + x + \frac{1}{4} - (i^{2}\frac{3}{4}) = x^2 + x + \frac{1}{4} - (- \frac{3}{4}) = x^2 + x + 1\)</span></p>
+</details>
+<details class="example"><summary>Example - <span class="arithmatex">\(\Phi_{6}(x)\)</span></summary><p>The 2 primitive 6<sup>th</sup> roots of unity are <span class="arithmatex">\(e^{2i \pi \cdot \frac{1}{6}} = \frac{1}{2} + i \frac{\sqrt{3}}{2}\)</span> and <span class="arithmatex">\(e^{2i \pi \cdot \frac{5}{6}} = \frac{1}{2} - i \frac{\sqrt{3}}{2}\)</span></p>
+<p>Thus <span class="arithmatex">\(\Phi_{6}(x) = (x - (\frac{1}{2} + i \frac{\sqrt{3}}{2})) \cdot (x - (\frac{1}{2} - i \frac{\sqrt{3}}{2})) = (x - \frac{1}{2} - i \frac{\sqrt{3}}{2}) \cdot (x - \frac{1}{2} + i \frac{\sqrt{3}}{2})\)</span></p>
+<p><span class="arithmatex">\(= x^2 - \frac{1}{2}x + \cancel{i\frac{\sqrt{3}}{2}x} - \frac{1}{2}x + \frac{1}{4} - \cancel{i \frac{\sqrt{3}}{4}} - \cancel{i\frac{\sqrt{3}}{2}x} + \cancel{i\frac{\sqrt{3}}{4}} - (i\frac{\sqrt{3}}{2})^2\)</span></p>
+<p><span class="arithmatex">\(= x^2 - x + \frac{1}{4} - (i^{2}\frac{3}{4}) = x^2 - x + \frac{1}{4} - (- \frac{3}{4}) = x^2 - x + 1\)</span></p>
+</details>
+<details class="example"><summary>Example <span class="arithmatex">\(\displaystyle \prod_{d \mid 6} \Phi_{d}(x)\)</span></summary><p><span class="arithmatex">\(\displaystyle \prod_{d \mid 6} \Phi_{d}(x) = \Phi_{1}(x) \cdot \Phi_{2}(x) \cdot \Phi_{3}(x) \cdot \Phi_{6}(x) = (x - 1) \cdot (x + 1) \cdot (x^2 + x + 1) \cdot (x^2 - x + 1)\)</span></p>
+<p><span class="arithmatex">\(= (x - 1) \cdot (x + 1) \cdot (x^4 - \cancel{x^3} + \cancel{x^2} + \cancel{x^3} - \cancel{x^2} + \cancel{x} + x^2 - \cancel{x} + 1)\)</span></p>
+<p><span class="arithmatex">\(= (x - 1) \cdot (x + 1) \cdot (x^4 + x^2 + 1)\)</span></p>
+<p><span class="arithmatex">\(= (x - 1) \cdot (x^5 + x^3 + x + x^4 + x^2 + 1) = (x-1) \cdot (x^5 + x^4 + x^3 + x^2 + x + 1)\)</span></p>
+<p><span class="arithmatex">\(= (x^6 + \cancel{x^5} + \cancel{x^4} + \cancel{x^3} + \cancel{x^2} + \cancel{x} - \cancel{x^5} - \cancel{x^4} - \cancel{x^3} - \cancel{x^2} - \cancel{x} - 1)\)</span></p>
+<p><span class="arithmatex">\(= x^6 - 1\)</span></p>
+</details>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cyclotomic_polynomial">Cyclotomic polynomial - wikipedia</a></li>
+</ul>
                 
               
               
@@ -496,6 +584,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../abstract_algebra/" class="md-footer__link md-footer__link--prev" aria-label="Previous: General" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              General
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../monoid/" class="md-footer__link md-footer__link--next" aria-label="Next: Monoid" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Monoid
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -516,10 +639,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.56a63758.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56a63758.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
       
