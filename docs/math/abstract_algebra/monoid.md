@@ -1,6 +1,6 @@
 # Abstract algebra monoid
 
-![Magme to group](../assets/Magma_to_group4.svg)
+![Magme to group](../../assets/Magma_to_group4.svg)
 
 ## Magma
 

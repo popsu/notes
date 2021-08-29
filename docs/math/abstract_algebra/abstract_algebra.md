@@ -43,5 +43,5 @@ Let $G$ be a finite abelian group. Then $G$ is a direct product of cyclic groups
 
 ## Links
 
-[Finite field - wikipedia](https://en.wikipedia.org/wiki/Finite_field)
-[301.11D The Fundamental Theorem of Finite Abelian Groups - youtube](https://www.youtube.com/watch?v=LPDlaG3fAfQ&list=PLL0ATV5XYF8AQZuEYPnVwpiFy0jEipqN-)
+- [Finite field - wikipedia](https://en.wikipedia.org/wiki/Finite_field)
+- [301.11D The Fundamental Theorem of Finite Abelian Groups - youtube](https://www.youtube.com/watch?v=LPDlaG3fAfQ&list=PLL0ATV5XYF8AQZuEYPnVwpiFy0jEipqN-)

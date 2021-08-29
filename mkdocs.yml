@@ -27,14 +27,14 @@ theme:
 nav:
     # - Home: index.md
     - Math:
+      - Abstract Algebra:
+        - General: math/abstract_algebra/abstract_algebra.md
+        - Monoid: math/abstract_algebra/monoid.md
       - Fourier Transform:
         - Discrete FT:  math/discrete_fourier_transform.md
         - Discrete FFT: math/discrete_fft.md
         - DFT Matrix: math/dft_matrix.md
         - Vandermonde Matrix: math/vandermonde_matrix.md
-      - Abstract Algebra:
-        - General: math/abstract_algebra.md
-        - Monoid: math/monoid.md
     - Go:
       - io.Reader: go/io_reader.md
 
