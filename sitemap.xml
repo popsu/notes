@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://popsu.github.io/notes/</loc>
-         <lastmod>2021-08-22</lastmod>
+         <lastmod>2021-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://popsu.github.io/notes/go/io_reader/</loc>
-         <lastmod>2021-08-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://popsu.github.io/notes/math/abstract_algebra/</loc>
-         <lastmod>2021-08-22</lastmod>
+         <lastmod>2021-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://popsu.github.io/notes/math/dft_matrix/</loc>
-         <lastmod>2021-08-22</lastmod>
+         <lastmod>2021-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://popsu.github.io/notes/math/discrete_fft/</loc>
-         <lastmod>2021-08-22</lastmod>
+         <lastmod>2021-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://popsu.github.io/notes/math/discrete_fourier_transform/</loc>
-         <lastmod>2021-08-22</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://popsu.github.io/notes/math/monoid/</loc>
-         <lastmod>2021-08-22</lastmod>
+         <lastmod>2021-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://popsu.github.io/notes/math/vandermonde_matrix/</loc>
-         <lastmod>2021-08-22</lastmod>
+         <lastmod>2021-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://popsu.github.io/notes/math/abstract_algebra/abstract_algebra/</loc>
+         <lastmod>2021-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://popsu.github.io/notes/math/abstract_algebra/monoid/</loc>
+         <lastmod>2021-08-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
