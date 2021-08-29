@@ -29,6 +29,7 @@ nav:
     - Math:
       - Abstract Algebra:
         - General: math/abstract_algebra/abstract_algebra.md
+        - Cyclotomic Polynomials: math/abstract_algebra/cyclotomic_polynomials.md
         - Monoid: math/abstract_algebra/monoid.md
       - Fourier Transform:
         - Discrete FT:  math/discrete_fourier_transform.md
